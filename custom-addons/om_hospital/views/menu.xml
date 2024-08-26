@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<odoo>
+    <data>
+        <menuitem id="menu_hospital_root"
+                  name="HMS"
+                  sequence="35"/>
+         <menuitem id="menu_fontdesk"
+                  name="Front Desk"
+                  parent="menu_hospital_root"/>
+        <menuitem id="menu_patients"
+                  name="Patients"
+                  parent="menu_fontdesk"
+                  action="action_hospital_patient"/>
+        <menuitem id="menu_patients_readonly"
+                  name="View Patients"
+                  parent="menu_fontdesk"
+                  action="action_hospital_readonly_patient"/>
+
+        <menuitem id="menu_appointment"
+                  name="Appointments"
+                  parent="menu_fontdesk"
+                  action="action_hospital_appointment"/>
+
+
+    </data>
+</odoo>
+
+<!--
+<odoo>
+  <menuitem name="HMS" id="menu_hospital_root">
+
+        <menuitem id="menu_fontdesk" name="Front Desk">
+            <menuitem id="menu_patients" name="Patients" action="action_hospital_patient"/>
+            <menuitem id="menu_patients_readonly" name="View Patients" action="action_hospital_readonly_patient"/>
+        </menuitem>
+    </menuitem>
+</odoo>
+-->
