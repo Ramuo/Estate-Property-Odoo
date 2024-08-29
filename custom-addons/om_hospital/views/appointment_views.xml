@@ -38,6 +38,7 @@
                        <group>
                            <field name="note"/>
                        </group>
+                        <field name="appointment_line_ids"/>
                     </group>
                 </sheet>
                 <div class="oe_chatter">
