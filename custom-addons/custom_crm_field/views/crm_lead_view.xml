@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="view_crm_lead_form_inherit" model="ir.ui.view">
+        <field name="name">crm.lead.form.inherit.custom</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.crm_lead_view_form"/>
+        <field name="arch" type="xml">
+            <!-- Find the 'lead' page and insert the custom field after the 'street' field in 'Contact Information' group -->
+            <xpath expr="//page[@name='lead']//group//field[@name='website']" position="after">
+                <group>
+                    <field name="custom_field" string="Custom Field"/>
+                    <!--<field name="complexity_rating" title="Choose a rating: 1 ⭐ = Simple 2 ⭐⭐ = Medium 3 ⭐⭐⭐ = Complex"/> -->
+                </group>
+            </xpath>
+
+            <xpath expr="//field[@name='tag_ids']" position="after">
+                <group>
+                    <field name="complexity_rating" widget="priority" string="Complexity"/>
+                </group>
+            </xpath>
+        </field>
+    </record>
+</odoo>
+
+
+
+
+
+
+
+
+

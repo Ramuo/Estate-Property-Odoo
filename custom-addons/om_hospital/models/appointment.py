@@ -5,6 +5,7 @@ class HospitalAppointment(models.Model):
     _name = 'hospital.appointment'
     _inherit = ['mail.thread']
     _description = 'Appointment Appointment'
+    _rec_names_search = ['reference', 'patient_id']
     _rec_name = 'patient_id'
 
 
@@ -54,5 +55,5 @@ class HospitalAppointmentLines(models.Model):
     _description = 'Hospital Appointment Line'
 
     appointment_id = fields.Many2one('hospital.appointment', string='Appointment')
-    product_id = fields.Many2one('product.product', string='Product')
+    #product_id = fields.Many2one('product.product', string='Product')
     qty = fields.Integer(string='Quantity')
